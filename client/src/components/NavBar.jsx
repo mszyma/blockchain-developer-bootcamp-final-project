@@ -1,9 +1,12 @@
 import React from 'react';
 import { Flex, Heading } from '@chakra-ui/react';
-import { useState } from 'react';
 import { ColorModeSwitcher } from '../ColorModeSwitcher';
+import { useWeb3React } from '@web3-react/core';
 
 const NavBar = props => {
+  const web3 = useWeb3React();
+  console.log(web3);
+
   return (
     <Flex
       as="nav"
