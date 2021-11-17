@@ -7,7 +7,7 @@ import {
   AppDispatchContext,
   AppStateContext,
   appReducer,
-  appState,
+  initialState,
 } from './store/appReducer';
 
 function getLibrary(provider, connector) {
@@ -15,7 +15,7 @@ function getLibrary(provider, connector) {
 }
 
 function App() {
-  const [dispatch, store] = useReducer(appReducer, appState);
+  const [dispatch, store] = useReducer(appReducer, initialState);
 
   return (
     <AppDispatchContext.Provider value={dispatch}>
